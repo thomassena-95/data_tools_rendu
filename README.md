@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# Application de Gestion de Données - Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+Cette application frontend fait partie d'un projet de gestion et d'analyse de données. Elle permet aux utilisateurs de visualiser, gérer et analyser des données de manière interactive et intuitive.
 
-## Available Scripts
+## Technologies Utilisées
+- React.js
+- CSS3
+- Nginx (pour le déploiement)
+- Docker (pour la conteneurisation)
 
-In the project directory, you can run:
+## Structure du Projet
+```
+frontend/
+├── src/
+│   ├── components/         # Composants React
+│   │   ├── Header.jsx     # En-tête de l'application
+│   │   ├── Home.jsx       # Page d'accueil
+│   │   └── DataManager.jsx # Gestionnaire de données
+│   ├── services/          # Services et API
+│   └── styles/            # Fichiers CSS
+├── public/                # Fichiers statiques
+└── Dockerfile            # Configuration Docker
+```
 
-### `npm start`
+## Fonctionnalités Principales
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 1. Interface Utilisateur
+- Design moderne et responsive
+- Navigation intuitive
+- Composants réutilisables
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 2. Gestion des Données
+- Visualisation des données
+- Interface de gestion interactive
+- Filtres et recherche
 
-### `npm test`
+### 3. Intégration
+- Communication avec le backend via API REST
+- Gestion des erreurs
+- Validation des données
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation et Démarrage
 
-### `npm run build`
+### Prérequis
+- Node.js (version 14 ou supérieure)
+- npm ou yarn
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
+```bash
+# Installation des dépendances
+npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Démarrage en mode développement
+npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Déploiement avec Docker
+```bash
+# Construction de l'image
+docker build -t frontend-app .
 
-### `npm run eject`
+# Lancement du conteneur
+docker run -p 80:80 frontend-app
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Contribution
+Ce projet a été développé par Thomas Sena dans le cadre d'un projet académique.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Points Techniques Notables
+1. Architecture modulaire
+2. Gestion d'état optimisée
+3. Performance et optimisation
+4. Sécurité des données
+5. Tests unitaires
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contact
+Pour toute question concernant la partie frontend, veuillez contacter Thomas Sena.
