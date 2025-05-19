@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  frontend:
+    image: thomassena/frontend:latest
+    ports:
+      - "80:80"
+    environment:
+      - VITE_API_URL=https://backend-250727144578.europe-west1.run.app
+    networks:
+      - app-network
+    restart: unless-stopped
+
+  backend:
+    image: thomassena/backend:latest
+    ports:
+      - "8000:8000"
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/credentials.json
+      - BUCKET_NAME=mini-api-fichier
+      - GCP_PROJECT_ID=mini-api-459307
+      - GCP_LOCATION=us-central1
+      - FILE_PATH=data.json
+    volumes:
+      - /Users/thomas/Desktop/ESME/Inge2/Hand_On/TP/credentials.json:/app/credentials.json
+    networks:
+      - app-network
+    restart: unless-stopped
+
+networks:
+  app-network:
+    driver: bridge
