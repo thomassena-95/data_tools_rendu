@@ -1,0 +1,46 @@
+.data-manager-container {
+  padding: 32px;
+}
+
+.file-list {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  margin-top: 24px;
+}
+
+.file-item {
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #eee;
+}
+
+.file-item:hover {
+  background-color: #f8f9fa;
+  transform: translateX(8px);
+}
+
+.file-item:last-child {
+  border-bottom: none;
+}
+
+.file-icon {
+  color: #1976d2;
+  margin-right: 16px;
+}
+
+.dialog-paper {
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.add-button {
+  transition: all 0.2s ease;
+}
+
+.add-button:hover {
+  transform: scale(1.1);
+}
+
+.snackbar {
+  border-radius: 8px;
+}
