@@ -7,15 +7,40 @@ Ce projet est une application web complète permettant la gestion et l'analyse d
 
 ### Frontend (Thomas Sena)
 - Développement de l'interface utilisateur avec React.js
-- Création des composants principaux :
-  - `Header.jsx` : Navigation et interface utilisateur
-  - `Home.jsx` : Page d'accueil
-  - `DataManager.jsx` : Gestion et visualisation des données
-  - `JokeGenerator.jsx` : Interface pour la génération de blagues
-- Intégration avec l'API backend
-- Mise en place du style et de l'expérience utilisateur
-- Configuration du déploiement avec Nginx
-- Gestion des appels API pour la génération de blagues
+- Architecture modulaire avec une structure claire :
+  ```
+  frontend/
+  ├── src/
+  │   ├── components/         # Composants React principaux
+  │   │   ├── Header.jsx     # Navigation et interface utilisateur
+  │   │   ├── Home.jsx       # Page d'accueil avec présentation
+  │   │   └── DataManager.jsx # Gestion et visualisation des données
+  │   ├── services/          # Services API et utilitaires
+  │   └── styles/            # Fichiers CSS et styles
+  ├── public/                # Fichiers statiques
+  └── Dockerfile            # Configuration Docker
+  ```
+- Fonctionnalités principales :
+  - Interface de gestion des données interactive
+  - Visualisation des données du bucket GCP
+  - Génération de blagues via l'API Vertex AI
+  - Navigation intuitive entre les différentes sections
+  - Design responsive et moderne
+- Intégration avec le backend :
+  - Appels API REST pour la gestion des données
+  - Gestion des erreurs et des états de chargement
+  - Validation des données côté client
+- Configuration du déploiement :
+  - Docker pour la conteneurisation
+  - Nginx pour le serveur web
+  - Configuration optimisée pour la production
+- Points techniques notables :
+  - Architecture modulaire et réutilisable
+  - Gestion d'état optimisée
+  - Tests unitaires
+  - Gestion des erreurs robuste
+  - Interface utilisateur intuitive
+  - Performance optimisée
 
 ### Backend (Gabin)
 - Développement de l'API REST avec FastAPI
