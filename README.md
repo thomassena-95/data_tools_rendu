@@ -23,9 +23,13 @@ Ce projet est une application web complète permettant la gestion et l'analyse d
   - Gestion du stockage (Cloud Storage)
   - Intégration avec Vertex AI pour la génération de blagues
 - Mise en place des endpoints :
-  - `/data` : Gestion des données
-  - `/analyze` : Analyse des données
-  - `/generate-joke` : Génération de blagues via Vertex AI
+  - `/hello` : Message de bienvenue
+  - `/status` : Vérification du statut de l'API
+  - `/data` : Gestion des fichiers (lecture/écriture)
+  - `/data/{filename}` : Ajout de données à un fichier spécifique
+  - `/joke` : Génération de blagues via Vertex AI
+  - `/config` : Vérification de la configuration
+  - `/debug` : Informations de débogage
 - Gestion de l'authentification et des permissions
 - Optimisation des performances
 
